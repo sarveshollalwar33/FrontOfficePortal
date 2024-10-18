@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unlock Your Account</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Include the Navbar -->
+    <div th:replace="navbar :: navbar"></div>
+<div class="container" style="max-width: 500px; margin-top: 50px;">
+    <h2 class="text-center">Unlock Your Account</h2>
+    <form th:action="@{/unlock}" method="post" class="mt-4">
+        <div class="form-group">
+            <label for="tempPassword">Temporary Password</label>
+            <input type="password" id="tempPassword" name="tempPassword" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" name="newPassword" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="reNewPassword">Re-enter New Password</label>
+            <input type="password" id="reNewPassword" name="reNewPassword" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <p>Already unlocked? <a th:href="@{/login}" class="btn btn-link">Login here</a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${userName} + ' Performance'">User Performance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Include the Navbar -->
+    <div th:replace="navbar2 :: navbar"></div>
+<div class="container" style="margin-top: 50px;">
+    <h2 th:text="${userName} + ' Performance'"></h2>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Enquiries Registered</h5>
+                    <p class="card-text" th:text="${totalEnquiries}">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Students Enrolled</h5>
+                    <p class="card-text" th:text="${studentsEnrolled}">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Students Lost</h5>
+                    <p class="card-text" th:text="${studentsLost}">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

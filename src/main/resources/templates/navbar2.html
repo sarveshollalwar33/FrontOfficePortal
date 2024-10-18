@@ -1,0 +1,32 @@
+<!-- navbar2.html -->
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a href="/" class="navbar-brand">
+                <img src="logo.jpg" alt="Brand Logo" style="height: 40px;"> <!-- Replace with your logo path -->
+            </a>
+
+            <!-- Navbar Toggle Button for Mobile View -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <!-- View Student Enquiry Button -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_student">View Student Enquiries</a>
+                    </li>
+                    <!-- Add Student Enquiry Button -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_enquiry">Add Student Enquiry</a>
+                    </li>
+                </ul>
+                <!-- Logout Button on the Right -->
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="/">Logout</a>
+            </div>
+        </div>
+    </nav>
+</div>

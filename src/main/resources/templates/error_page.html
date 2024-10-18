@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error-container {
+            margin-top: 100px;
+            text-align: center;
+        }
+        .error-container h1 {
+            font-size: 100px;
+            color: #dc3545;
+        }
+        .error-container p {
+            font-size: 20px;
+        }
+        .home-button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Error Container -->
+    <div class="container error-container">
+        <h1>Oops!</h1>
+        <p>Something went wrong. The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <p>Please try again later or go back to the homepage.</p>
+        <a href="/" class="btn btn-primary home-button">Go to Homepage</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center mt-5">
+        <p>&copy; 2023 AshokIT. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

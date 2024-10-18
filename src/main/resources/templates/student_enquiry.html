@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Enquiry Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Centering the form */
+        .center-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 86vh; /* Full height of the viewport */
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px; /* Reduce max width */
+            padding: 15px; /* Reduce padding */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        /* Reduce margin between form elements */
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- Include the Navbar -->
+    <div th:replace="navbar2 :: navbar"></div>
+<div class="center-form">
+    <div class="form-container">
+        <h4 class="text-center">Student Enquiry </h4>
+        <form th:action="@{/registerstudent}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control form-control-sm" required> <!-- Smaller form-control -->
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number</label>
+                <input type="text" id="contactNumber" name="contactNumber" class="form-control form-control-sm" required>
+            </div>
+            <div class="form-group">
+                <label for="classMode">Class Mode</label>
+                <select id="classMode" name="classMode" class="form-control form-control-sm" required>
+                    <option value="">Select Class Mode</option>
+                    <option value="offline">Offline</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" class="form-control form-control-sm" required>
+                    <option value="">Select Course</option>
+                    <option value="java_fullstack">Java Fullstack</option>
+                    <option value="aws">AWS</option>
+                    <option value="devops">DevOps</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="enquiryStatus">Enquiry Status</label>
+                <select id="enquiryStatus" name="enquiryStatus" class="form-control form-control-sm" required>
+                    <option value="">Select Enquiry Status</option>
+                    <option value="new">New</option>
+                    <option value="in_progress">In Progress</option>
+                    <option value="closed">Closed</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm btn-block">Submit</button> <!-- Smaller button -->
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .trending-courses {
+            margin-top: 30px;
+        }
+        .trending-courses img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the Navbar -->
+    <div th:replace="navbar :: navbar"></div>
+
+    <!-- Carousel Section -->
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="frustrate.jpg" alt="First slide" style="max-height: 300px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="devops.jpg" alt="Second slide" style="max-height: 300px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="fullstack.jpg" alt="Third slide" style="max-height: 300px; object-fit: cover;">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+    <!-- Trending Courses Section -->
+    <div class="container trending-courses">
+        <h3 class="text-center">Trending Courses</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="spring.jpg" alt="Trending Course 1" class="img-fluid">
+                
+            </div>
+            <div class="col-md-4">
+                <img src="dotnet.jpg" alt="Trending Course 2" class="img-fluid">
+               
+            </div>
+            <div class="col-md-4">
+                <img src="advweb.jpg" alt="Trending Course 3" class="img-fluid">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
